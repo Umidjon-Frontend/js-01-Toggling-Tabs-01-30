@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #a2d2ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.toggle__nav,
+.toggle__select {
+  width: 600px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 2rem;
+}
+.toggle__navWrap {
+  display: flex;
+}
+.toggle__navWrap div {
+  padding: 1rem;
+  font-weight: 700;
+  border-top: 3px solid #3a86ff;
+  border-bottom: 3px solid #3a86ff;
+  cursor: pointer;
+}
+.toggle__navWrap div:nth-child(1) {
+  border-radius: 8px 0 0 8px;
+  border-left: 3px solid #3a86ff;
+  border-right: 3px solid #3a86ff;
+}
+.toggle__navWrap div:nth-child(2) {
+  border-right: 3px solid #3a86ff;
+}
+.toggle__navWrap div:nth-child(3) {
+  border-radius: 0 8px 8px 0;
+  border-right: 3px solid #3a86ff;
+}
+.toggle__navWrap div:hover {
+  background-color: #ccc;
+}
+.toggle__navWrap div.active {
+  background-color: #3a86ff;
+  color: #fff;
+}
+.toggle__select{
+  display: none;
+}
+.toggle__selectWrap {
+  width: 100%;
+}
+select {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 8px;
+  outline: none;
+  border: 3px solid #3a86ff;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 650px) {
+  .toggle__select{
+    display: block;
+  }
+  .toggle__nav{
+    display: none;
+  }
+}
